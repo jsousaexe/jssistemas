@@ -1,0 +1,18 @@
+// Utilities
+
+// Converte PX -> REM
+@function to-rem($size: 16) {
+    $value: calc($size / 16);
+    @return ($value + rem);
+  }
+  
+  // Adiciona efeito hover para botão
+  @mixin hover($color, $bg-color) {
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color !important;
+      background: lighten($bg-color, 15%) !important;
+    }
+  }
+  

@@ -1,0 +1,49 @@
+.loader {
+  height: inherit;
+  width: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+:host {
+  color: #0199db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &.small {
+    color: #fff;
+
+    &-dark {
+      color: #333;
+    }
+
+    .spinner-border {
+      @media (min-width: 992px) {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  &.small-dark {
+    color: #0199db;
+
+    .spinner-border {
+      @media (min-width: 992px) {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .spinner-border {
+    color: inherit;
+    font-size: inherit;
+    height: 35px;
+    width: 35px;
+    border-width: .15rem;
+  }
+}

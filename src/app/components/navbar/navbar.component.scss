@@ -1,0 +1,21 @@
+@import '../../../assets/scss/function.scss';
+
+.navbar{
+    display: flex;
+    background: #000;
+    height: 70px;
+    justify-content: center;
+    ul{
+        li{
+            list-style: none;
+            width: fit-content;
+           
+            padding: to-rem(2) to-rem(5);
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: to-rem(18);
+            }
+        }
+    }
+}
