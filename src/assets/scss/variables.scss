@@ -3,61 +3,16 @@
 // Fonts
 $primary-font: 'Poppins', sans-serif;
 
-// Colors
-// Red
-$strong-red: #D71440;
-$vivid-red: #DB1D3F;
-$very-soft-red: #EDA095;
-
-// Green
-$very-soft-green: #CCED95;
-$soft-green: #BDEA74;
-
-// Blue
-$bright-blue: #42ABE1;
-$bright-blue-hover: #2993C9;
-$bright-blue-press: #0A557B;
-$bright-blue-disable: #C4E2F2;
-$dark-blue: #1F5594;
-$dark-blue-2: #2E609A;
-$dark-blue-3: #014A7F;
-$dark-blue-4: #203A93;
-$very-dark-blue: #112E50;
-$very-dark-blue-2: #071F43;
-$pure-blue: #0038FF;
-$very-dark-grayish-blue: #2C3840;
-$very-dark-grayish-blue-2: #2E323F;
-$mostly-desaturated-dark-blue: #5E6785;
-$mostly-desaturated-dark-blue-2: #BBC1D6;
-$mostly-desaturated-dark-blue-3: #6D789D;
-$very-dark-desaturated-blue: #2D3347;
-$gradient-blue: linear-gradient(271.68deg, $pure-blue -13.99%, $dark-blue-4 129.27%);
-$gradient-blue-inverted: linear-gradient(271deg, $dark-blue-4 0%, $pure-blue 42%);
-$gradient-red: linear-gradient(145.04deg, $dark-blue-3 -6.37%, $strong-red 106.91%);
+// sidebar
+$color-sidebar: #fff;
+$border-sidebar: #ededed;
 
 // Gray
 $very-light-gray: #DFDFDF;
-$very-light-gray-2: #D9D9D9;
-$very-light-gray-3: #F6F6F6;
-$very-light-gray-4: #F5F5F5;
-$very-light-gray-5: #F7F7F7;
-$very-light-gray-6: #EFEFEF;
-$very-light-gray-7: #F8F8F8;
-$very-light-gray-8: #F3F3F3;
-$light-grayish-blue: #C7D3DC;
-$light-grayish-blue-2: #DBDEE7;
-$dark-grayish-blue: #808285;
-$grayish-blue: #B8C5D0;
-$grayish-blue-2: #89969F;
-$very-dark-gray: #1E1E1E;
-$very-dark-gray-2: #424242;
-$very-dark-gray-3: #343434;
-$darker-gray: #EEEEF0;
-$download-gray: #E0E3EF;
-$download-gray-hover: #B0BCE8;
-$download-gray-pressed: #8F9FD9;
 
 // Others
 $white: #FFFFFF;
 $black: #000000;
-$strong-cyan: #29BD91;
+
+$very-dark-desaturated-blue: #2D3347;
+

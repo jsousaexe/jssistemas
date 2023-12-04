@@ -1,0 +1,178 @@
+@import '../../../assets/scss/variables.scss';
+
+// Sidebar
+$width-min: 92px;
+$width-max: 240px;
+
+// sidebar-opened
+
+.sidebar-content {
+    scrollbar-width: thin;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: calc(100vh - 80px); // 80px do nav-bar
+    background-color: $color-sidebar;
+    max-width: $width-max;
+    width: 100%;
+    transition: 0.1s ease-in-out;
+
+    .sidebar {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .btn-menu{
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid $border-sidebar;
+            border-radius: 0;
+            .logo{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              
+                img{
+                  transition: 0.1s all;
+                  width: 100%;
+                  max-height: 45px;
+                  transition: 0.2s;
+                  &.menor{
+                    max-height: 35px;
+                  }
+                }
+              }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+
+            .items,
+            .btn-collapse {
+                position: relative;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                height: 40px;
+                font-size: 1rem;
+                color: black;
+                text-decoration: none;
+                padding-left: 5px;
+                padding-right: 5px;
+                transition: 0.3s all;
+
+                &:hover {
+                    transition: 0.3s ease-in;
+                    opacity: 0.7;
+                    background-color: #ffffff7a;
+
+                    ::before {
+                        content: '';
+                        position: absolute;
+                        width: 3px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: #fff;
+                        transition: 0.3s ease-in;
+                    }
+                }
+
+            }
+
+            // submenu
+            .btn-collapse {
+                border: none;
+                &.seta {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 15px;
+                        right: 1.5rem;
+                        border-top: 1px solid white;
+                        border-right: 1px solid white;
+                        width: .5rem;
+                        height: .5rem;
+                        transform: rotate(45deg);
+                        transition: transform .25s ease-in-out;
+                    }
+                }
+
+                &.seta-active {
+                    &::before {
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+            // subitems
+            .subitem{
+                border-top: 2px solid white;
+                background-color: rgb(197, 197, 197);
+                display: flex;
+                flex-direction: column;
+                transition: transform .2s ease-in-out;
+            }
+
+        }
+    }
+}
+
+// Sidebar Close
+.sidebar-content {
+    &.sidebar-closed {
+        max-width: $width-min;
+        width: 100%;
+        transition: 0.1s ease-in-out;
+
+        .sidebar {
+            .links {
+
+                .items,
+                .btn-collapse {
+                    justify-content: center;
+
+                    span {
+                        display: none;
+                    }
+                }
+                // sub menu
+                .btn-collapse {
+                    &.seta {
+                        &::before {
+                            display: none!important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+// Conatiner <main>
+::ng-deep {
+    body {
+        main {
+            background-color: rgb(243, 243, 243);
+            min-height: 100vh;
+        }
+
+        &.sidebar-opened {
+            main {
+                padding-left: $width-max;
+                width: 100%;
+            }
+        }
+
+        &.sidebar-closed {
+            main {
+                padding-left: $width-min;
+                width: 100%;
+            }
+        }
+    }
+}

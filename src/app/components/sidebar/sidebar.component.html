@@ -1,1 +1,50 @@
-<p>sidebar works!</p>
+<div class="sidebar-content" [ngClass]="{'sidebar-closed' : sidebar === 'sidebar-closed'}">
+
+    <nav class="sidebar">
+        <button type="button" class="btn btn-menu" (click)="togleSidebar()">
+            @if(sidebar === 'sidebar-opened'){
+            <div class="logo">
+                <img src="assets/images/jssistemasblack.svg" alt="Logo JS Sistemas">
+            </div>
+            }@else {
+            <div class="logo">
+                <img src="assets/images/logo300.svg" class="menor" alt="Logo JS Sistemas">
+            </div>
+            }
+
+        </button>
+        <div class="links">
+            <!-- Menus sidebar -->
+            <a routerLink="" routerLinkActive="active" class="items" [tooltipjs]="'home'" [tooltipPosition]="'right'">
+                <i-bs name="house-fill" width="1.25rem" height="1.25rem"></i-bs>
+                <span>Home</span>
+            </a>
+            <a routerLink="utilitarios" routerLinkActive="active" class="items" [tooltipjs]="'Utilitários'"
+                [tooltipPosition]="'right'">
+                <i-bs name="collection-fill" width="1.25rem" height="1.25rem"></i-bs>
+                <span>Utilitários</span>
+            </a>
+
+            <button type="button" data-title="Cadastros" class="btn-collapse seta" [attr.aria-expanded]="subCadastros"
+                [tooltipjs]="'Cadastro'" [tooltipPosition]="'right'" aria-controls="subCadastros"
+                [ngClass]="{'seta-active' : subCadastros}" (click)="subCadastros = !subCadastros">
+                <i-bs name="folder" width="1.25rem" height="1.25rem"></i-bs>
+                <span>Cadastro</span>
+            </button>
+
+            @if(subCadastros){
+            <div class="subitem" [@SubItemAnimation]>
+                <a data-title="Cursos" routerLink="curso" routerLinkActive="active" class="items">
+                    <span>Cursos</span>
+                </a>
+                <a data-title="Escolaridade" routerLink="escolaridade" routerLinkActive="active" class="items">
+                    <span>Escolaridades</span>
+                </a>
+            </div>
+            }
+
+
+        </div>
+    </nav>
+
+</div>

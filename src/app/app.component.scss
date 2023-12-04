@@ -1,0 +1,9 @@
+main{
+    transition: 0.3s ease-in-out;
+    &.sidebar-opened{
+        padding-left: 280px;
+    }
+    &.sidebar-close{
+        padding-left: 90px;
+    }
+}

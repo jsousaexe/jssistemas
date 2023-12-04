@@ -3,6 +3,9 @@
 // Bootstrap 5 - All components
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+// Tooltip
+@import '../src/app/bibliotecasJS/tooltip/tooltip.scss';
+
 // CUSTOM
 @import './assets/scss/custom';
 @import './assets/scss/function';

@@ -52,3 +52,13 @@ export const EaseOutAnimation = trigger('EaseOutAnimation', [
   ]),
 ]);
 
+
+export const SubItemAnimation = trigger('SubItemAnimation', [
+  transition(':enter', [
+    style({ height: '0', opacity: 0}), // Inicia com altura 0 e opacidade 0
+    animate('.2s ease', style({ height: '*', opacity: 1 })), // Anima para a altura desejada e opacidade 1
+  ]),
+  transition(':leave', [
+    animate('.2s ease', style({ height: '0', opacity: 0 })), // Anima para altura 0 e opacidade 0
+  ]),
+]);
